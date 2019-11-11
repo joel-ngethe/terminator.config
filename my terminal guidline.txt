@@ -1,0 +1,33 @@
+installation of terminator terminal 
+
+https://gist.github.com/JohnTroony/b50976a75e1cde430e909b8076599157
+
+
+1. type the code
+# apt-get install terminator
+
+2. to remove borders and edges, paste the code in the config file(~/.config/terminator/config - the config file for Terminator terminal emulator.show hidden files in the home directory)
+
+[global_config]
+  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.83
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+    scrollback_infinite = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+
+
+3. if no terminal folder, create one and copy the config file(text format)
